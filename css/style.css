@@ -692,6 +692,10 @@ input:focus-visible {
         font-size: 2rem;
     }
 
+.grid-three--cols, 
+.grid-four--cols {
+grid-template-columns: repeat(2, 1fr); 
+}
 }
 
 @media (max-width: 650px ) {
