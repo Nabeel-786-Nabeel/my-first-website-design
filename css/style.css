@@ -789,6 +789,9 @@ footer .grid-four--cols {
 .grid {
     gap: 3.6rem;
 }
+ . section-blog, .section-course, .section-contact {
+     grid-template-columns: 1fr;
+ }
 
 .section-contact--homepage .submit-btn {
   display: block;
