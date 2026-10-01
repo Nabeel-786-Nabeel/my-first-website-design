@@ -642,170 +642,7 @@ input:focus-visible {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--heading-color);
 }
-/* ============================================================
-   RESPONSIVE MEDIA QUERIES — Laptop First
-   ============================================================ */
 
-/* ---------- 1100px (Small Laptop) ---------- */
-@media (max-width: 1100px) {
-    html {
-        font-size: 56.25%;       /* 1rem = 9px */
-    }
-    p, a {
-        font-size: 1.8rem;       /* 16.2px */
-    }
-    .custom-shape-divider-bottom-1766899191 svg {
-        height: 120px;
-    }
-}
-
-/* ---------- 950px (Tablet) ---------- */
-@media (max-width: 950px) {
-    html {
-        font-size: 56.25%;       /* 1rem = 9px */
-    }
-    p, a {
-        font-size: 1.8rem;
-    }
-    .section-common-heading {
-        font-size: 3rem;
-    }
-}
-
-/* ---------- 850px (Tablet) ---------- */
-@media (max-width: 850px) {
-    html {
-        font-size: 56.25%;       /* Same — no shrink */
-    }
-    p, a {
-        font-size: 1.8rem;
-    }
-    .custom-shape-divider-bottom-1766899191 svg {
-        height: 50px;
-    }
-    .section-common-heading {
-        font-size: 2.8rem;
-    }
-}
-
-/* ---------- 750px (Large Mobile) ---------- */
-@media (max-width: 750px) {
-    html {
-        font-size: 56.25%;       /* Keep consistent */
-    }
-    p, a {
-        font-size: 1.7rem;
-    }
-
-    /* 4-column grids → 2 columns */
-    .grid-four--cols {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    /* 3-column grids → 2 columns */
-    .grid-three--cols,
-    .grid-three--clos {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .section-common-heading {
-        font-size: 2.6rem;
-    }
-}
-
-/* ---------- 650px (Mobile) — MAIN FIX ---------- */
-@media (max-width: 650px) {
-    html {
-        font-size: 56.25%;       /* Same base — fonts readable */
-    }
-    p, a {
-        font-size: 1.6rem;       /* 14.4px — clean readable */
-        line-height: 1.6;
-    }
-
-    /* Navbar column */
-    .section-navbar .container {
-        display: flex;
-        flex-direction: column;
-    }
-    .section-navbar .nav-brand {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    /* Hero: image on top */
-    .section-hero--image {
-        order: 1;
-        width: 60%;
-        margin: 0 auto;
-    }
-    .section-hero--content {
-        order: 2;
-    }
-    .section-hero {
-        height: auto;
-    }
-
-    /* SAARE grids → 1 column (About + Course + Blog + Contact + Service) */
-    .grid-two--cols,
-    .grid-three--cols,
-    .grid-three--clos,
-    .grid-four--cols,
-    .section-course .grid-four--cols,
-    .section-blog .grid-four--cols,
-    .section-service .grid-four--cols {
-        grid-template-columns: 1fr;
-    }
-
-    /* ⭐ ABOUT SECTION — 1 column, centered */
-    .section-about .container.grid,
-    .section-about .grid-three--clos {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
-    .section-about .about-div {
-        padding: 2rem 1.5rem;
-    }
-
-    /* ⭐ BLOG SECTION — Reduce padding (was too big) */
-    .section-blog .blog-content {
-        padding: 1.6rem 1.8rem 1.8rem;
-    }
-    .section-blog .blog {
-        margin-bottom: 2rem;
-    }
-    .section-blog .grid {
-        gap: 2.5rem;
-    }
-
-    /* ⭐ COURSE SECTION — Reduce padding */
-    .section-course .course-div {
-        padding: 2.5rem 2rem;
-        margin: 0;
-    }
-
-    /* Common heading smaller */
-    .section-common-heading {
-        font-size: 2.4rem;
-    }
-    .section-common-subheading {
-        font-size: 1.6rem;
-        padding: 0 1rem;
-    }
-    .section-common--title {
-        font-size: 1.8rem;
-        margin: 1.6rem 0 0.8rem;
-    }
-
-    /* Why-choose circles decoration band */
-    .choose-center--div figure::before,
-    .choose-center--div figure::after {
-        width: 0;
-        height: 0;
-        background-color: transparent;
-        border: none;
-    }
-
-    /* Section grids gap */
-    :is(
         .section-about,
         .section-blog,
         .section-course,
@@ -886,52 +723,412 @@ input:focus-visible {
         width: 60%;
     }
     .section-why--choose .text-align--right .why-choose--div {
+
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES — Laptop First (1100px se 350px tak)
+   ============================================================ */
+
+/* ---------- 1100px (Small Laptop) ---------- */
+@media (max-width: 1100px) {
+    html {
+        font-size: 50.25%;    /* 1rem = 8.04px */
+    }
+    p, a, li, label {
+        font-size: 2rem;      /* thoda bara text */
+    }
+    .custom-shape-divider-bottom-1766899191 svg {
+        height: 120px;
+    }
+}
+
+/* ---------- 950px (Tablet) ---------- */
+@media (max-width: 950px) {
+    html {
+        font-size: 45.25%;
+    }
+    p, a, li, label {
+        font-size: 2rem;
+    }
+}
+
+/* ---------- 850px (Tablet) ---------- */
+@media (max-width: 850px) {
+    html {
+        font-size: 40.25%;
+    }
+    p, a, li, label {
+        font-size: 2rem;
+    }
+    .custom-shape-divider-bottom-1766899191 svg {
+        height: 50px;
+    }
+
+    /* Blog cards ki padding kam karein */
+    .section-blog .blog-content {
+        padding: 1rem 1.6rem 1.6rem;
+    }
+
+    /* Blog image ki width full */
+    .section-blog .blog img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ---------- 750px (Large Mobile) ---------- */
+@media (max-width: 750px) {
+    html {
+        font-size: 35.25%;
+    }
+    p, a, li, label {
+        font-size: 2rem;
+    }
+
+    /* 4-column aur 3-column grids → 2 columns */
+    .grid-four--cols,
+    .grid-three--cols,
+    .grid-three--clos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Blog cards ki padding aur kam */
+    .section-blog .blog-content {
+        padding: 0.8rem 1.4rem 1.4rem;
+    }
+    .section-blog .section-common--title {
+        font-size: 1.8rem;
+        margin-top: 0.5rem;
+    }
+    .section-blog .blog-date {
+        margin: 0;
+        padding-top: 0.5rem;
+        font-size: 1.6rem;
+    }
+}
+
+/* ---------- 650px (Mobile) ---------- */
+@media (max-width: 650px) {
+    /* Navbar column layout */
+    .section-navbar .container {
+        display: flex;
+        flex-direction: column;
+        padding: 1.2rem 1.6rem;
+    }
+    .section-navbar .nav-brand {
+        text-align: center;
+        margin-bottom: 1.6rem;
+    }
+
+    p, a, li, label {
+        font-size: 2rem;
+    }
+
+    /* ---------- HERO ---------- */
+    .section-hero--image {
+        order: 1;
+        width: 60%;
+        margin: 0 auto;
+    }
+    .section-hero--content {
+        order: 2;
+        text-align: center;
+    }
+    .section-hero {
+        height: auto;
+    }
+
+    /* ---------- SAARE 2/3/4 COLUMN GRIDS → 1 COLUMN ---------- */
+    .grid-two--cols,
+    .grid-three--cols,
+    .grid-three--clos,
+    .grid-four--cols,
+    .section-course .grid-four--cols,
+    .section-blog .grid-four--cols,
+    .section-service .grid-four--cols,
+    .section-contact .grid-four--cols {
+        grid-template-columns: 1fr;
+    }
+
+    /* ---------- ABOUT SECTION → 1 COLUMN ---------- */
+    .section-about .grid-three--clos {
+        grid-template-columns: 1fr;
+        gap: 3.2rem;
+    }
+    .section-about .about-div {
+        padding: 2rem 1rem;
+    }
+    .section-about .icon-para {
+        padding: 0 1.6rem;
+    }
+
+    /* ---------- BLOG CARDS PADDING KAM ---------- */
+    .section-blog {
+        padding: 0;
+    }
+    .section-blog .blog {
+        margin: 0 0 2rem 0;
+        border-radius: 0.8rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    .section-blog .blog-content {
+        padding: 1.2rem 1.6rem 1.6rem;
+    }
+    .section-blog .section-common--title {
+        font-size: 1.9rem;
+        margin-top: 0.4rem;
+        margin-bottom: 0.6rem;
+    }
+    .section-blog .blog-date {
+        margin: 0;
+        padding-top: 0.6rem;
+        font-size: 1.5rem;
+        margin-left: 0;
+    }
+    .section-blog .blog-date i.fa-arrow-right {
+        margin-right: 0;
+    }
+    .section-blog p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+    .section-blog img {
+        border-radius: 0.8rem 0.8rem 0 0;
+    }
+
+    /* ---------- WHY CHOOSE SECTION ---------- */
+    .choose-center--div figure::before,
+    .choose-center--div figure::after {
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        padding: 0;
+    }
+    .section-why--choose .grid-three--cols {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .choose-center--div {
+        order: 1;
+    }
+    .choose-left--div {
+        order: 2;
+        text-align: left !important;
+    }
+    .choose-right--div {
+        order: 3;
+        text-align: left !important;
+    }
+    .section-why--choose .text-align--right .why-choose--div {
         align-items: start;
         text-align: left;
     }
+    .section-why--choose img {
+        width: 50%;
+    }
+    .common-text--highlight {
+        margin-top: 1.5rem;
+    }
 
-    /* Course card margins reset */
+    /* ---------- CONTACT HOMEPAGE CARD ---------- */
+    .section-contact--homepage {
+        width: 90%;
+        padding: 3rem 2rem;
+        bottom: -12rem;
+        margin-bottom: 3rem;
+    }
+    .section-contact--homepage .grid {
+        gap: 2.4rem;
+        grid-template-columns: 1fr;
+    }
+    .contact-title {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+    .contact-content {
+        text-align: center;
+    }
+    .section-contact--homepage .submit-btn {
+        display: inline-block;
+        text-align: center;
+        padding: 1.6rem 3.2rem;
+        font-size: 1.8rem;
+    }
+    .section-contact--homepage img {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /* ---------- SAARE SECTIONS KA GRID GAP ---------- */
+    :is(
+        .section-about,
+        .section-blog,
+        .section-course,
+        .section-contact--homepage,
+        .section-why--choose,
+        .section-contact,
+        .section-service
+    ) .grid {
+        gap: 3.6rem;
+    }
+
+    /* ---------- CONTACT FORM (CONTACT PAGE) ---------- */
+    .section-contact .grid-two--cols {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .section-contact input,
+    .section-contact textarea {
+        padding: 1.2rem 1.6rem;
+        font-size: 1.8rem;
+    }
+    .section-contact label {
+        font-size: 1.8rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+        padding-top: 6rem;
+    }
+    footer .grid-four--cols {
+        grid-template-columns: repeat(3, 1fr);  /* 3 columns for links */
+        gap: 2rem;
+        text-align: center;
+    }
+
+    /* EduHub brand + icons neeche */
+    .footer-1--cols {
+        grid-column: 1 / -1;    /* poori width le */
+        order: 2;               /* baad mein aaye */
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-1--cols .social-footer--icons {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    /* Links 3 columns mein top par */
+    .footer-2--cols,
+    .footer-3--cols,
+    .footer-4--cols {
+        order: 1;
+        text-align: center;
+    }
+
+    .footer-subheading {
+        font-size: 1.9rem;
+        margin-bottom: 1rem;
+    }
+    footer ul li {
+        margin-bottom: 0.6rem;
+    }
+    footer ul li a {
+        font-size: 1.6rem;
+    }
+    .logo-brand p {
+        font-size: 1.6rem;
+    }
+}
+
+/* ---------- 580px (Small Mobile) ---------- */
+@media (max-width: 580px) {
     .section-course .course-div {
-        padding: 1.8rem 1.4rem;
-        margin: 0;
+        padding: 3rem 2rem;
+        margin: 1rem 0;
     }
 
-    /* Blog padding minimum */
+    /* Blog cards chhoti padding */
     .section-blog .blog-content {
-        padding: 1.2rem 1.4rem 1.4rem;
+        padding: 1rem 1.2rem 1.4rem;
+    }
+    .section-blog .section-common--title {
+        font-size: 1.8rem;
+    }
+    .section-blog p {
+        font-size: 1.5rem;
     }
 
-    .section-common-heading {
-        font-size: 2rem;
+    .contact-title {
+        font-size: 2.2rem;
     }
-    .section-common-subheading {
+}
+
+/* ---------- 500px (Small Mobile) ---------- */
+@media (max-width: 500px) {
+    html {
+        font-size: 32.5%;
+    }
+    p, a, li, label {
+        font-size: 1.9rem;
+    }
+
+    .section-why--choose img {
+        width: 40%;
+    }
+
+    /* Footer links 3 columns mein hi rahein lekin chhote */
+    footer .grid-four--cols {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    .footer-subheading {
+        font-size: 1.7rem;
+    }
+    footer ul li a {
+        font-size: 1.5rem;
+    }
+
+    /* Blog cards aur chhoti */
+    .section-blog .blog-content {
+        padding: 0.8rem 1rem 1.2rem;
+    }
+    .section-blog .section-common--title {
+        font-size: 1.7rem;
+    }
+    .section-blog .blog-date {
         font-size: 1.4rem;
+    }
+
+    /* Contact form fields */
+    .section-contact input,
+    .section-contact textarea {
+        padding: 1rem 1.4rem;
+        font-size: 1.7rem;
     }
 }
 
 /* ---------- 350px (Very Small Mobile) ---------- */
 @media (max-width: 350px) {
     html {
-        font-size: 50%;          /* 1rem = 8px */
-    }
-    p, a {
-        font-size: 1.5rem;       /* 12px */
+        font-size: 30%;
     }
 
+    /* Footer links stack ho jayein agar bohot choti screen */
     footer .grid-four--cols {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
     }
+
     .grid-four--cols,
     .section-course .grid-four--cols,
     .section-blog .grid-four--cols {
         grid-template-columns: 1fr;
     }
-    .section-common-heading {
-        font-size: 1.8rem;
-    }
-}
 
+    .footer-subheading {
+        font-size: 1.6rem;
+    }
+    footer ul li a {
+        font-size: 1.4rem;
+    }
+    }
+
+        
 /* ============================================================
    RESPONSIVE MEDIA QUERIES — Laptop First
    ============================================================ */
