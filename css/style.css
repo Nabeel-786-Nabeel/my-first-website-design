@@ -642,13 +642,302 @@ input:focus-visible {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--heading-color);
 }
-
 /* ============================================================
    RESPONSIVE MEDIA QUERIES — Laptop First
    ============================================================ */
 
 /* ---------- 1100px (Small Laptop) ---------- */
 @media (max-width: 1100px) {
+    html {
+        font-size: 56.25%;       /* 1rem = 9px */
+    }
+    p, a {
+        font-size: 1.8rem;       /* 16.2px */
+    }
+    .custom-shape-divider-bottom-1766899191 svg {
+        height: 120px;
+    }
+}
+
+/* ---------- 950px (Tablet) ---------- */
+@media (max-width: 950px) {
+    html {
+        font-size: 56.25%;       /* 1rem = 9px */
+    }
+    p, a {
+        font-size: 1.8rem;
+    }
+    .section-common-heading {
+        font-size: 3rem;
+    }
+}
+
+/* ---------- 850px (Tablet) ---------- */
+@media (max-width: 850px) {
+    html {
+        font-size: 56.25%;       /* Same — no shrink */
+    }
+    p, a {
+        font-size: 1.8rem;
+    }
+    .custom-shape-divider-bottom-1766899191 svg {
+        height: 50px;
+    }
+    .section-common-heading {
+        font-size: 2.8rem;
+    }
+}
+
+/* ---------- 750px (Large Mobile) ---------- */
+@media (max-width: 750px) {
+    html {
+        font-size: 56.25%;       /* Keep consistent */
+    }
+    p, a {
+        font-size: 1.7rem;
+    }
+
+    /* 4-column grids → 2 columns */
+    .grid-four--cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* 3-column grids → 2 columns */
+    .grid-three--cols,
+    .grid-three--clos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .section-common-heading {
+        font-size: 2.6rem;
+    }
+}
+
+/* ---------- 650px (Mobile) — MAIN FIX ---------- */
+@media (max-width: 650px) {
+    html {
+        font-size: 56.25%;       /* Same base — fonts readable */
+    }
+    p, a {
+        font-size: 1.6rem;       /* 14.4px — clean readable */
+        line-height: 1.6;
+    }
+
+    /* Navbar column */
+    .section-navbar .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .section-navbar .nav-brand {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    /* Hero: image on top */
+    .section-hero--image {
+        order: 1;
+        width: 60%;
+        margin: 0 auto;
+    }
+    .section-hero--content {
+        order: 2;
+    }
+    .section-hero {
+        height: auto;
+    }
+
+    /* SAARE grids → 1 column (About + Course + Blog + Contact + Service) */
+    .grid-two--cols,
+    .grid-three--cols,
+    .grid-three--clos,
+    .grid-four--cols,
+    .section-course .grid-four--cols,
+    .section-blog .grid-four--cols,
+    .section-service .grid-four--cols {
+        grid-template-columns: 1fr;
+    }
+
+    /* ⭐ ABOUT SECTION — 1 column, centered */
+    .section-about .container.grid,
+    .section-about .grid-three--clos {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .section-about .about-div {
+        padding: 2rem 1.5rem;
+    }
+
+    /* ⭐ BLOG SECTION — Reduce padding (was too big) */
+    .section-blog .blog-content {
+        padding: 1.6rem 1.8rem 1.8rem;
+    }
+    .section-blog .blog {
+        margin-bottom: 2rem;
+    }
+    .section-blog .grid {
+        gap: 2.5rem;
+    }
+
+    /* ⭐ COURSE SECTION — Reduce padding */
+    .section-course .course-div {
+        padding: 2.5rem 2rem;
+        margin: 0;
+    }
+
+    /* Common heading smaller */
+    .section-common-heading {
+        font-size: 2.4rem;
+    }
+    .section-common-subheading {
+        font-size: 1.6rem;
+        padding: 0 1rem;
+    }
+    .section-common--title {
+        font-size: 1.8rem;
+        margin: 1.6rem 0 0.8rem;
+    }
+
+    /* Why-choose circles decoration band */
+    .choose-center--div figure::before,
+    .choose-center--div figure::after {
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        border: none;
+    }
+
+    /* Section grids gap */
+    :is(
+        .section-about,
+        .section-blog,
+        .section-course,
+        .section-contact--homepage,
+        .section-why--choose,
+        .section-contact
+    ) .grid {
+        gap: 3rem;
+    }
+
+    /* Contact homepage button */
+    .section-contact--homepage .submit-btn {
+        display: block;
+        text-align: center;
+        padding: 2rem 3rem;
+        font-size: 1.8rem;
+    }
+
+    /* Footer — 1 column centered */
+    footer .grid-four--cols {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+    }
+    .footer-1--cols {
+        grid-row: auto;
+        grid-column: auto;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-1--cols .social-footer--icons {
+        justify-content: center;
+    }
+}
+
+/* ---------- 580px (Small Mobile) ---------- */
+@media (max-width: 580px) {
+    html {
+        font-size: 56.25%;
+    }
+    p, a {
+        font-size: 1.5rem;
+    }
+
+    .choose-center--div { order: 1; }
+    .choose-left--div   { order: 2; }
+    .choose-right--div  { order: 3; }
+
+    /* Course cards tighter */
+    .section-course .course-div {
+        padding: 2rem 1.5rem;
+        margin: 0;
+    }
+
+    /* Blog tighter */
+    .section-blog .blog-content {
+        padding: 1.4rem 1.6rem 1.6rem;
+    }
+
+    .section-common-heading {
+        font-size: 2.2rem;
+    }
+}
+
+/* ---------- 500px (Small Mobile) ---------- */
+@media (max-width: 500px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .section-why--choose .grid-three--cols {
+        flex-direction: column;
+    }
+    .section-why--choose img {
+        width: 60%;
+    }
+    .section-why--choose .text-align--right .why-choose--div {
+        align-items: start;
+        text-align: left;
+    }
+
+    /* Course card margins reset */
+    .section-course .course-div {
+        padding: 1.8rem 1.4rem;
+        margin: 0;
+    }
+
+    /* Blog padding minimum */
+    .section-blog .blog-content {
+        padding: 1.2rem 1.4rem 1.4rem;
+    }
+
+    .section-common-heading {
+        font-size: 2rem;
+    }
+    .section-common-subheading {
+        font-size: 1.4rem;
+    }
+}
+
+/* ---------- 350px (Very Small Mobile) ---------- */
+@media (max-width: 350px) {
+    html {
+        font-size: 50%;          /* 1rem = 8px */
+    }
+    p, a {
+        font-size: 1.5rem;       /* 12px */
+    }
+
+    footer .grid-four--cols {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .grid-four--cols,
+    .section-course .grid-four--cols,
+    .section-blog .grid-four--cols {
+        grid-template-columns: 1fr;
+    }
+    .section-common-heading {
+        font-size: 1.8rem;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES — Laptop First
+   ============================================================ */
+
+/* ---------- 1100px (Small Laptop) ---------- 
+/*@media (max-width: 1100px) {
     html {
         font-size: 50.25%;
     }
@@ -660,7 +949,7 @@ input:focus-visible {
     }
 }
 
-/* ---------- 950px (Tablet) ---------- */
+/* ---------- 950px (Tablet) ---------- 
 @media (max-width: 950px) {
     html {
         font-size: 45.25%;
@@ -670,7 +959,7 @@ input:focus-visible {
     }
 }
 
-/* ---------- 850px (Tablet) ---------- */
+/* ---------- 850px (Tablet) ---------- 
 @media (max-width: 850px) {
     html {
         font-size: 40.25%;
@@ -687,7 +976,7 @@ input:focus-visible {
    SAB 4-column grids ko 2 columns karein
    (section-course, section-blog, section-service, 
     section-contact, koi bhi .grid-four--cols)
-*/
+
 @media (max-width: 750px) {
     html {
         font-size: 35.25%;
@@ -696,19 +985,19 @@ input:focus-visible {
         font-size: 2rem;
     }
 
-    /* Yahan saari grid-four--cols ko 2 column karein */
+    /* Yahan saari grid-four--cols ko 2 column karein 
     .grid-four--cols {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* 3-column bhi 2 kar dein */
+    /* 3-column bhi 2 kar dein 
     .grid-three--cols,
     .grid-three--clos {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* ---------- 650px (Mobile) ---------- */
+/* ---------- 650px (Mobile) ---------- 
 @media (max-width: 650px) {
     /* Navbar column layout */
     .section-navbar .container {
@@ -724,7 +1013,7 @@ input:focus-visible {
         font-size: 2rem;
     }
 
-    /* Footer 1 column */
+    /* Footer 1 column 
     footer .grid-four--cols {
         grid-template-columns: 1fr;
         gap: 2.5rem;
@@ -743,7 +1032,7 @@ input:focus-visible {
         justify-content: center;
     }
 
-    /* Hero image on top */
+    /* Hero image on top 
     .section-hero--image {
         order: 1;
         width: 50%;
@@ -756,18 +1045,18 @@ input:focus-visible {
         height: auto;
     }
 
-    /* SAARE 2-column grids -> 1 column */
+    /* SAARE 2-column grids -> 1 column 
     .grid-two--cols {
         grid-template-columns: 1fr;
     }
 
-    /* SAARE 3-column aur 3-column-alternate -> 1 column */
+    /* SAARE 3-column aur 3-column-alternate -> 1 column 
     .grid-three--cols,
     .grid-three--clos {
         grid-template-columns: 1fr;
     }
 
-    /* Choose center circle decoration band */
+    /* Choose center circle decoration band 
     .choose-center--div figure::before,
     .choose-center--div figure::after {
         width: 0;
@@ -776,7 +1065,7 @@ input:focus-visible {
         padding: 0;
     }
 
-    /* Saare sections ka grid gap chhota */
+    /* Saare sections ka grid gap chhota 
     :is(
         .section-about,
         .section-blog,
@@ -788,14 +1077,14 @@ input:focus-visible {
         gap: 3.6rem;
     }
 
-    /* ⭐ MAIN FIX — SAARE 4-column grids 1 column */
+    /* ⭐ MAIN FIX — SAARE 4-column grids 1 column 
     .grid-four--cols,
     .section-course .grid-four--cols,
     .section-blog .grid-four--cols {
         grid-template-columns: 1fr;
     }
 
-    /* Contact homepage button full width */
+    /* Contact homepage button full width 
     .section-contact--homepage .submit-btn {
         display: block;
         text-align: center;
@@ -803,7 +1092,7 @@ input:focus-visible {
     }
 }
 
-/* ---------- 580px (Small Mobile) ---------- */
+/* ---------- 580px (Small Mobile) ---------- 
 @media (max-width: 580px) {
     .choose-center--div {
         order: 1;
@@ -821,7 +1110,7 @@ input:focus-visible {
     }
 }
 
-/* ---------- 500px (Small Mobile) ---------- */
+/* ---------- 500px (Small Mobile) ---------- 
 @media (max-width: 500px) {
     .section-why--choose .grid-three--cols {
         flex-direction: column;
@@ -837,7 +1126,7 @@ input:focus-visible {
 
 /* ---------- 350px (Very Small Mobile) ----------
    TYPO FIX: pehle "350pxpx" likha tha, ab "350px"
-*/
+
 @media (max-width: 350px) {
     footer .grid-four--cols {
         grid-template-columns: 1fr;
@@ -848,7 +1137,7 @@ input:focus-visible {
     .section-blog .grid-four--cols {
         grid-template-columns: 1fr;
     }
-}
+}*/
 
 /*@media (max-width: 1100px ) {
     html {
