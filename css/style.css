@@ -680,136 +680,54 @@ input:focus-visible {
         justify-content: center;
     }
 }
-
-/* ---------- 580px (Small Mobile) ---------- */
-@media (max-width: 580px) {
-    html {
-        font-size: 56.25%;
-    }
-    p, a {
-        font-size: 1.5rem;
-    }
-
-    .choose-center--div { order: 1; }
-    .choose-left--div   { order: 2; }
-    .choose-right--div  { order: 3; }
-
-    /* Course cards tighter */
-    .section-course .course-div {
-        padding: 2rem 1.5rem;
-        margin: 0;
-    }
-
-    /* Blog tighter */
-    .section-blog .blog-content {
-        padding: 1.4rem 1.6rem 1.6rem;
-    }
-
-    .section-common-heading {
-        font-size: 2.2rem;
-    }
-}
-
-/* ---------- 500px (Small Mobile) ---------- */
-@media (max-width: 500px) {
-    html {
-        font-size: 56.25%;
-    }
-
-    .section-why--choose .grid-three--cols {
-        flex-direction: column;
-    }
-    .section-why--choose img {
-        width: 60%;
-    }
-    .section-why--choose .text-align--right .why-choose--div {
-
-
 /* ============================================================
-   RESPONSIVE MEDIA QUERIES — Laptop First (1100px se 350px tak)
+   RESPONSIVE MEDIA QUERIES — Complete Fix
+   Laptop first (1100px) → Mobile (350px)
    ============================================================ */
 
 /* ---------- 1100px (Small Laptop) ---------- */
 @media (max-width: 1100px) {
-    html {
-        font-size: 50.25%;    /* 1rem = 8.04px */
-    }
-    p, a, li, label {
-        font-size: 2rem;      /* thoda bara text */
-    }
-    .custom-shape-divider-bottom-1766899191 svg {
-        height: 120px;
-    }
+    html { font-size: 50.25%; }
+    p, a, li, label { font-size: 1.8rem; }
+    .custom-shape-divider-bottom-1766899191 svg { height: 120px; }
 }
 
 /* ---------- 950px (Tablet) ---------- */
 @media (max-width: 950px) {
-    html {
-        font-size: 45.25%;
-    }
-    p, a, li, label {
-        font-size: 2rem;
-    }
+    html { font-size: 45.25%; }
+    p, a, li, label { font-size: 1.8rem; }
 }
 
 /* ---------- 850px (Tablet) ---------- */
 @media (max-width: 850px) {
-    html {
-        font-size: 40.25%;
-    }
-    p, a, li, label {
-        font-size: 2rem;
-    }
-    .custom-shape-divider-bottom-1766899191 svg {
-        height: 50px;
-    }
+    html { font-size: 40.25%; }
+    p, a, li, label { font-size: 1.8rem; }
+    .custom-shape-divider-bottom-1766899191 svg { height: 50px; }
 
-    /* Blog cards ki padding kam karein */
-    .section-blog .blog-content {
-        padding: 1rem 1.6rem 1.6rem;
-    }
-
-    /* Blog image ki width full */
-    .section-blog .blog img {
-        width: 100%;
-        height: auto;
-    }
+    /* Blog cards ki padding kam */
+    .section-blog .blog-content { padding: 1.2rem 1.6rem 1.6rem; }
 }
 
 /* ---------- 750px (Large Mobile) ---------- */
 @media (max-width: 750px) {
-    html {
-        font-size: 35.25%;
-    }
-    p, a, li, label {
-        font-size: 2rem;
-    }
+    html { font-size: 35.25%; }
+    p, a, li, label { font-size: 1.8rem; }
 
-    /* 4-column aur 3-column grids → 2 columns */
-    .grid-four--cols,
+    /* 3 aur 4 column grids → 2 columns */
     .grid-three--cols,
-    .grid-three--clos {
+    .grid-three--clos,
+    .grid-four--cols {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Blog cards ki padding aur kam */
-    .section-blog .blog-content {
-        padding: 0.8rem 1.4rem 1.4rem;
-    }
-    .section-blog .section-common--title {
-        font-size: 1.8rem;
-        margin-top: 0.5rem;
-    }
-    .section-blog .blog-date {
-        margin: 0;
-        padding-top: 0.5rem;
-        font-size: 1.6rem;
     }
 }
 
-/* ---------- 650px (Mobile) ---------- */
+/* ---------- 650px (MOBILE) — MAIN FIX ---------- */
 @media (max-width: 650px) {
-    /* Navbar column layout */
+    /* Font sizes */
+    html { font-size: 32.5%; }
+    p, a, li, label { font-size: 1.7rem; }
+
+    /* ---------- NAVBAR ---------- */
     .section-navbar .container {
         display: flex;
         flex-direction: column;
@@ -817,160 +735,189 @@ input:focus-visible {
     }
     .section-navbar .nav-brand {
         text-align: center;
-        margin-bottom: 1.6rem;
+        margin-bottom: 1.4rem;
+    }
+    .section-navbar nav ul {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section-navbar nav ul li a {
+        font-size: 1.5rem;
     }
 
-    p, a, li, label {
-        font-size: 2rem;
-    }
-
-    /* ---------- HERO ---------- */
+    /* ---------- HERO SECTION ---------- */
     .section-hero--image {
         order: 1;
-        width: 60%;
+        width: 70%;
         margin: 0 auto;
     }
     .section-hero--content {
         order: 2;
         text-align: center;
     }
-    .section-hero {
-        height: auto;
+    .section-hero { height: auto; }
+    .hero-heading {
+        font-size: 3.6rem;
+        line-height: 1.3;
+    }
+    .hero-subheading { font-size: 1.5rem; }
+    .hero-para {
+        font-size: 1.7rem;
+        margin: 1.5rem 0 2.5rem 0;
     }
 
-    /* ---------- SAARE 2/3/4 COLUMN GRIDS → 1 COLUMN ---------- */
+    /* ---------- SAARE GRIDS 1 COLUMN ---------- */
     .grid-two--cols,
     .grid-three--cols,
     .grid-three--clos,
     .grid-four--cols,
+    .section-about .grid-three--clos,
     .section-course .grid-four--cols,
     .section-blog .grid-four--cols,
-    .section-service .grid-four--cols,
-    .section-contact .grid-four--cols {
+    .section-service .grid-four--cols {
         grid-template-columns: 1fr;
     }
 
-    /* ---------- ABOUT SECTION → 1 COLUMN ---------- */
+    /* ---------- ABOUT SECTION (1 COLUMN) ---------- */
     .section-about .grid-three--clos {
         grid-template-columns: 1fr;
-        gap: 3.2rem;
+        gap: 2.4rem;
     }
     .section-about .about-div {
-        padding: 2rem 1rem;
+        padding: 2rem 1.5rem;
+        margin-bottom: 1.5rem;
     }
     .section-about .icon-para {
-        padding: 0 1.6rem;
+        padding: 0 1rem;
+        font-size: 1.6rem;
+    }
+    .section-about .container img {
+        width: 9rem;
+        padding: 1.8rem;
+    }
+    .section-common--title {
+        font-size: 2rem;
+        margin: 1.6rem 0 1rem 0;
+    }
+    .section-common-heading {
+        font-size: 2.6rem;
+    }
+    .section-common-subheading {
+        font-size: 1.6rem;
+        padding: 0 1rem;
     }
 
-    /* ---------- BLOG CARDS PADDING KAM ---------- */
-    .section-blog {
-        padding: 0;
+    /* ---------- BLOG PAGE (PADDING FIX) ---------- */
+    .section-blog .grid {
+        gap: 2rem;
     }
     .section-blog .blog {
         margin: 0 0 2rem 0;
-        border-radius: 0.8rem;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        border-radius: 1rem;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
+    .section-blog .blog img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem 1rem 0 0;
+    }
+    /* Blog content ki padding kam */
     .section-blog .blog-content {
         padding: 1.2rem 1.6rem 1.6rem;
     }
-    .section-blog .section-common--title {
-        font-size: 1.9rem;
-        margin-top: 0.4rem;
-        margin-bottom: 0.6rem;
-    }
+    /* Date aur arrow row */
     .section-blog .blog-date {
-        margin: 0;
-        padding-top: 0.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 0.8rem 0;
+        padding: 0;
         font-size: 1.5rem;
-        margin-left: 0;
     }
     .section-blog .blog-date i.fa-arrow-right {
         margin-right: 0;
     }
+    /* Blog heading chhota aur gap kam */
+    .section-blog .section-common--title {
+        font-size: 1.9rem;
+        margin: 0 0 0.6rem 0;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+    /* Blog paragraph */
     .section-blog p {
         font-size: 1.6rem;
         line-height: 1.6;
-    }
-    .section-blog img {
-        border-radius: 0.8rem 0.8rem 0 0;
+        margin: 0;
     }
 
     /* ---------- WHY CHOOSE SECTION ---------- */
+    .section-why--choose .grid-three--cols {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+    .choose-center--div { order: 1; }
+    .choose-left--div { order: 2; text-align: left !important; }
+    .choose-right--div { order: 3; text-align: left !important; }
+
+    .section-why--choose .text-align--right .why-choose--div {
+        align-items: flex-start;
+        text-align: left;
+    }
+    .section-why--choose img { width: 60%; }
+
     .choose-center--div figure::before,
     .choose-center--div figure::after {
         width: 0;
         height: 0;
         background-color: transparent;
         padding: 0;
-    }
-    .section-why--choose .grid-three--cols {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-    }
-    .choose-center--div {
-        order: 1;
-    }
-    .choose-left--div {
-        order: 2;
-        text-align: left !important;
-    }
-    .choose-right--div {
-        order: 3;
-        text-align: left !important;
-    }
-    .section-why--choose .text-align--right .why-choose--div {
-        align-items: start;
-        text-align: left;
-    }
-    .section-why--choose img {
-        width: 50%;
-    }
-    .common-text--highlight {
-        margin-top: 1.5rem;
+        border: none;
     }
 
-    /* ---------- CONTACT HOMEPAGE CARD ---------- */
+    .common-text--highlight {
+        margin-top: 1.2rem;
+        width: 5rem;
+        font-size: 2rem;
+    }
+    .why-choose--div {
+        margin-bottom: 2rem;
+    }
+
+    /* ---------- CONTACT HOMEPAGE CARD (FIX) ---------- */
     .section-contact--homepage {
-        width: 90%;
+        width: 92%;
         padding: 3rem 2rem;
-        bottom: -12rem;
-        margin-bottom: 3rem;
+        bottom: -10rem;
+        margin-bottom: 2rem;
+        border-radius: 1.2rem;
     }
     .section-contact--homepage .grid {
-        gap: 2.4rem;
         grid-template-columns: 1fr;
-    }
-    .contact-title {
-        font-size: 2.4rem;
-        text-align: center;
+        gap: 2.4rem;
     }
     .contact-content {
         text-align: center;
     }
+    .contact-title {
+        font-size: 2.4rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+    .contact-content p {
+        font-size: 1.6rem;
+        margin: 1rem 0 2rem 0;
+    }
     .section-contact--homepage .submit-btn {
         display: inline-block;
-        text-align: center;
-        padding: 1.6rem 3.2rem;
-        font-size: 1.8rem;
+        padding: 1.4rem 2.8rem;
+        font-size: 1.7rem;
     }
     .section-contact--homepage img {
-        width: 70%;
+        width: 75%;
         margin: 0 auto;
-    }
-
-    /* ---------- SAARE SECTIONS KA GRID GAP ---------- */
-    :is(
-        .section-about,
-        .section-blog,
-        .section-course,
-        .section-contact--homepage,
-        .section-why--choose,
-        .section-contact,
-        .section-service
-    ) .grid {
-        gap: 3.6rem;
     }
 
     /* ---------- CONTACT FORM (CONTACT PAGE) ---------- */
@@ -980,39 +927,34 @@ input:focus-visible {
     }
     .section-contact input,
     .section-contact textarea {
-        padding: 1.2rem 1.6rem;
-        font-size: 1.8rem;
+        padding: 1.4rem 1.8rem;
+        font-size: 1.7rem;
+        border-radius: 0.6rem;
+        border: 1px solid #ccc;
+    }
+    .section-contact textarea {
+        min-height: 15rem;
     }
     .section-contact label {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+    }
+    .section-contact .mb-3 {
+        margin-bottom: 1.6rem;
     }
 
-    /* ---------- FOOTER ---------- */
+    /* ---------- FOOTER (3 COLUMNS FOR LINKS) ---------- */
     footer {
-        padding-top: 6rem;
+        padding-top: 18rem;   /* Contact card ke overlap ke liye */
     }
     footer .grid-four--cols {
-        grid-template-columns: repeat(3, 1fr);  /* 3 columns for links */
-        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
         text-align: center;
     }
 
-    /* EduHub brand + icons neeche */
-    .footer-1--cols {
-        grid-column: 1 / -1;    /* poori width le */
-        order: 2;               /* baad mein aaye */
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .footer-1--cols .social-footer--icons {
-        justify-content: center;
-        margin-top: 1rem;
-    }
-
-    /* Links 3 columns mein top par */
+    /* Links (Courses, Links, Blogs) → top par 3 columns mein */
     .footer-2--cols,
     .footer-3--cols,
     .footer-4--cols {
@@ -1020,99 +962,78 @@ input:focus-visible {
         text-align: center;
     }
 
+    /* EduHub brand + icons → neeche full width */
+    .footer-1--cols {
+        grid-column: 1 / -1;
+        order: 2;
+        margin-top: 2.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-1--cols .logo-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-1--cols p {
+        margin: 1rem 0 1.5rem 0;
+        font-size: 1.5rem;
+    }
+    .footer-1--cols .social-footer--icons {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
     .footer-subheading {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
         margin-bottom: 1rem;
     }
     footer ul li {
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.7rem;
     }
     footer ul li a {
-        font-size: 1.6rem;
-    }
-    .logo-brand p {
-        font-size: 1.6rem;
-    }
-}
-
-/* ---------- 580px (Small Mobile) ---------- */
-@media (max-width: 580px) {
-    .section-course .course-div {
-        padding: 3rem 2rem;
-        margin: 1rem 0;
-    }
-
-    /* Blog cards chhoti padding */
-    .section-blog .blog-content {
-        padding: 1rem 1.2rem 1.4rem;
-    }
-    .section-blog .section-common--title {
-        font-size: 1.8rem;
-    }
-    .section-blog p {
         font-size: 1.5rem;
-    }
-
-    .contact-title {
-        font-size: 2.2rem;
     }
 }
 
 /* ---------- 500px (Small Mobile) ---------- */
 @media (max-width: 500px) {
-    html {
-        font-size: 32.5%;
-    }
-    p, a, li, label {
-        font-size: 1.9rem;
-    }
+    html { font-size: 30%; }
+    p, a, li, label { font-size: 1.6rem; }
 
-    .section-why--choose img {
-        width: 40%;
-    }
+    .hero-heading { font-size: 3.2rem; }
+    .section-common-heading { font-size: 2.4rem; }
 
-    /* Footer links 3 columns mein hi rahein lekin chhote */
+    /* Blog aur chhoti */
+    .section-blog .blog-content { padding: 1rem 1.4rem 1.4rem; }
+    .section-blog .section-common--title { font-size: 1.8rem; }
+    .section-blog p { font-size: 1.5rem; }
+
+    /* Contact card */
+    .contact-title { font-size: 2.2rem; }
+    .section-contact--homepage { padding: 2.5rem 1.6rem; }
+
+    /* Footer links 3 columns mein hi */
     footer .grid-four--cols {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
-    .footer-subheading {
-        font-size: 1.7rem;
-    }
-    footer ul li a {
-        font-size: 1.5rem;
-    }
+    .footer-subheading { font-size: 1.7rem; }
+    footer ul li a { font-size: 1.4rem; }
 
-    /* Blog cards aur chhoti */
-    .section-blog .blog-content {
-        padding: 0.8rem 1rem 1.2rem;
-    }
-    .section-blog .section-common--title {
-        font-size: 1.7rem;
-    }
-    .section-blog .blog-date {
-        font-size: 1.4rem;
-    }
-
-    /* Contact form fields */
+    /* Contact form */
     .section-contact input,
     .section-contact textarea {
-        padding: 1rem 1.4rem;
-        font-size: 1.7rem;
+        padding: 1.2rem 1.5rem;
+        font-size: 1.6rem;
     }
 }
 
 /* ---------- 350px (Very Small Mobile) ---------- */
 @media (max-width: 350px) {
-    html {
-        font-size: 30%;
-    }
-
-    /* Footer links stack ho jayein agar bohot choti screen */
-    footer .grid-four--cols {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.2rem;
-    }
+    html { font-size: 28%; }
 
     .grid-four--cols,
     .section-course .grid-four--cols,
@@ -1120,418 +1041,9 @@ input:focus-visible {
         grid-template-columns: 1fr;
     }
 
-    .footer-subheading {
-        font-size: 1.6rem;
-    }
-    footer ul li a {
-        font-size: 1.4rem;
-    }
+    .footer-subheading { font-size: 1.6rem; }
+    footer ul li a { font-size: 1.4rem; }
     }
 
+    
         
-/* ============================================================
-   RESPONSIVE MEDIA QUERIES — Laptop First
-   ============================================================ */
-
-/* ---------- 1100px (Small Laptop) ---------- 
-/*@media (max-width: 1100px) {
-    html {
-        font-size: 50.25%;
-    }
-    p, a {
-        font-size: 2rem;
-    }
-    .custom-shape-divider-bottom-1766899191 svg {
-        height: 120px;
-    }
-}
-
-/* ---------- 950px (Tablet) ---------- 
-@media (max-width: 950px) {
-    html {
-        font-size: 45.25%;
-    }
-    p, a {
-        font-size: 2rem;
-    }
-}
-
-/* ---------- 850px (Tablet) ---------- 
-@media (max-width: 850px) {
-    html {
-        font-size: 40.25%;
-    }
-    p, a {
-        font-size: 2rem;
-    }
-    .custom-shape-divider-bottom-1766899191 svg {
-        height: 50px;
-    }
-}
-
-/* ---------- 750px (Large Mobile) ----------
-   SAB 4-column grids ko 2 columns karein
-   (section-course, section-blog, section-service, 
-    section-contact, koi bhi .grid-four--cols)
-
-@media (max-width: 750px) {
-    html {
-        font-size: 35.25%;
-    }
-    p, a {
-        font-size: 2rem;
-    }
-
-    /* Yahan saari grid-four--cols ko 2 column karein 
-    .grid-four--cols {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* 3-column bhi 2 kar dein 
-    .grid-three--cols,
-    .grid-three--clos {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* ---------- 650px (Mobile) ---------- 
-@media (max-width: 650px) {
-    /* Navbar column layout */
-    .section-navbar .container {
-        display: flex;
-        flex-direction: column;
-    }
-    .section-navbar .nav-brand {
-        text-align: center;
-        margin-bottom: 2.4rem;
-    }
-
-    p, a {
-        font-size: 2rem;
-    }
-
-    /* Footer 1 column 
-    footer .grid-four--cols {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        text-align: center;
-    }
-    .footer-1--cols {
-        grid-row: auto;
-        grid-column: auto;
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .footer-1--cols .social-footer--icons {
-        justify-content: center;
-    }
-
-    /* Hero image on top 
-    .section-hero--image {
-        order: 1;
-        width: 50%;
-        margin: 0 auto;
-    }
-    .section-hero--content {
-        order: 2;
-    }
-    .section-hero {
-        height: auto;
-    }
-
-    /* SAARE 2-column grids -> 1 column 
-    .grid-two--cols {
-        grid-template-columns: 1fr;
-    }
-
-    /* SAARE 3-column aur 3-column-alternate -> 1 column 
-    .grid-three--cols,
-    .grid-three--clos {
-        grid-template-columns: 1fr;
-    }
-
-    /* Choose center circle decoration band 
-    .choose-center--div figure::before,
-    .choose-center--div figure::after {
-        width: 0;
-        height: 0;
-        background-color: transparent;
-        padding: 0;
-    }
-
-    /* Saare sections ka grid gap chhota 
-    :is(
-        .section-about,
-        .section-blog,
-        .section-course,
-        .section-contact--homepage,
-        .section-why--choose,
-        .section-contact
-    ) .grid {
-        gap: 3.6rem;
-    }
-
-    /* ⭐ MAIN FIX — SAARE 4-column grids 1 column 
-    .grid-four--cols,
-    .section-course .grid-four--cols,
-    .section-blog .grid-four--cols {
-        grid-template-columns: 1fr;
-    }
-
-    /* Contact homepage button full width 
-    .section-contact--homepage .submit-btn {
-        display: block;
-        text-align: center;
-        padding: 2.2rem 3.2rem;
-    }
-}
-
-/* ---------- 580px (Small Mobile) ---------- 
-@media (max-width: 580px) {
-    .choose-center--div {
-        order: 1;
-    }
-    .choose-left--div {
-        order: 2;
-    }
-    .choose-right--div {
-        order: 3;
-    }
-
-    .section-course .course-div {
-        padding: 3rem 6rem;
-        margin: 3rem;
-    }
-}
-
-/* ---------- 500px (Small Mobile) ---------- 
-@media (max-width: 500px) {
-    .section-why--choose .grid-three--cols {
-        flex-direction: column;
-    }
-    .section-why--choose img {
-        width: 30%;
-    }
-    .section-why--choose .text-align--right .why-choose--div {
-        align-items: start;
-        text-align: left;
-    }
-}
-
-/* ---------- 350px (Very Small Mobile) ----------
-   TYPO FIX: pehle "350pxpx" likha tha, ab "350px"
-
-@media (max-width: 350px) {
-    footer .grid-four--cols {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .grid-four--cols,
-    .section-course .grid-four--cols,
-    .section-blog .grid-four--cols {
-        grid-template-columns: 1fr;
-    }
-}*/
-
-/*@media (max-width: 1100px ) {
-    html {
-        font-size: 50.25%;
-    }
-      p, a {
-        font-size: 2rem;
-    }
-
-    
-.custom-shape-divider-bottom-1766899191 svg {
-    height: 120px;
-}
-
-}
-
-@media (max-width: 950px ) {
-    html {
-        font-size: 45.25%;
-    }
-    p, a {
-        font-size: 2rem;
-    }
-    
-
-}
-
-@media (max-width: 850px ) {
-    html {
-        font-size: 40.25%;
-    }
-    p, a {
-        font-size: 2rem;
-    }
-    
-
-    
-.custom-shape-divider-bottom-1766899191 svg {
-    height: 50px;
-}
-
-}
-@media (max-width: 750px ) {
-    html {
-        font-size: 35.25%;
-    }
-    p, a {
-        font-size: 2rem;
-    }
-
-.grid-three--cols, 
-.grid-four--cols {
-grid-template-columns: repeat(2, 1fr); 
-}
-}
-
-@media (max-width: 650px ) {
-    .section-navbar .container {
-        display: flex;
-        flex-direction: column;
-
-   & .nav-brand {
-        text-align: center;
-        margin-bottom: 2.4rem;
-    }
-    p, a {
-        font-size: 2rem;
-    }
-    footer .grid-four--cols {
-        grid-template-columns: 1fr; 
-        gap: 2.5rem; /* Space between the stacked sections */
-        text-align: center; /* Center align everything for mobile */
-    
-    }
-
-     .footer-1--cols {
-        grid-row: auto;
-        grid-column: auto;
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-     
-    footer-1--cols .social-footer--icons {
-        justify-content: center;
-    }
-}
-
-    & .section-hero--image {
-        order: 1;
-        width: 50%;
-        margin: 0 auto;
-    }
-
-    & .section-hero--content {
-        order: 2;
-    }
-
-    & .section-hero {
-        height: auto;
-    }
-
-    
-
-    & .grid-two--cols,
-    .grid-three--clos {
-        grid-template-columns: 1fr;
-    }
-
-
- /* & .footer-1--cols {
-    grid-row: 2/3;
-    grid-column: 1/-1;
-    margin-top: 6.4rem;
-  }*/
-
- & .choose-center--div {
-    & figure::before {
-        width: 0;
-        height: 0;
-        background-color: transparent;
-        padding: 0;
-    }
-     & figure::after {
-        width: 0;
-        height: 0;
-        background-color: transparent;
-        padding: 0;
-    }
-}
-
-:is(
-    .section-about, 
-    .section-blog, 
-    .section-course, 
-    .section-contact--homepage, 
-    .section-why--choose,
-    .section-contact
-)
-.grid {
-    gap: 3.6rem;
-}
- .section-course .grid-four--cols,
- .section-blog .grid-four--cols {
-     grid-template-columns: 1fr;
- }
-
-.section-contact--homepage .submit-btn {
-  display: block;
-  text-align: center;
-  padding: 2.2rem 3.2rem;
-  text-size: 4rem;
-}
-}
-
-@media (max-width: 580px) {
-    .choose-center--div
-    {
-        order: 1;
-    }
-    .choose-left--div {
-        order: 2;
-    }
-    .choose-right--div {
-        order: 3;
-    }
-    .section-course .course-div {
-    padding: 3rem 6rem;
-    margin: 3rem;
-}
-}
-
-@media (max-width: 500px) {
-    .section-why--choose .grid-three--cols {
-        flex-direction: column;
-    }
-    .section-why--choose {
-        & img{
-            width: 30%;
-        }
-    }
-    .section-why--choose .text-align--right .why-choose--div {
-    align-items: start;
-    text-align: left;
-}
-}
-
-@media (max-width: 350px) {
-    footer .grid-four--cols {
-    grid-template-columns: 1fr; /* Stack them */
-    gap: 2rem; /* Reduce the gap between the stacked sections */
-}
-     .section-course .grid-four--cols,
- .section-blog .grid-four--cols {
-     grid-template-columns: 1fr ! important;
- }
-} */
