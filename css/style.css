@@ -717,7 +717,7 @@ grid-template-columns: repeat(2, 1fr);
     
     }
 
-      .footer-1--cols {
+     /* .footer-1--cols {
         grid-row: auto;
         grid-column: auto;
         margin-top: 2rem;
@@ -725,14 +725,9 @@ grid-template-columns: repeat(2, 1fr);
         flex-direction: column;
         align-items: center;
         text-align: center;
-    }
+    }*/
 
      
-  .footer-1--cols {
-    grid-row: 2/3;
-    grid-column: 1/-1;
-    margin-top: 6.4rem;
-}
     footer-1--cols .social-footer--icons {
         justify-content: center;
     }
@@ -760,6 +755,11 @@ grid-template-columns: repeat(2, 1fr);
     }
 
 
+  & .footer-1--cols {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    margin-top: 6.4rem;
+  }
 
  & .choose-center--div {
     & figure::before {
@@ -789,7 +789,7 @@ grid-template-columns: repeat(2, 1fr);
 }
  .section-course .grid-four--cols,
  .section-blog .grid-four--cols {
-     grid-template-columns: 1fr ! important;
+     grid-template-columns: 1fr;
  }
 
 .section-contact--homepage .submit-btn {
@@ -841,4 +841,4 @@ grid-template-columns: repeat(2, 1fr);
  .section-blog .grid-four--cols {
      grid-template-columns: 1fr ! important;
  }
-}
+} 
