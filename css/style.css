@@ -215,7 +215,7 @@ main .section-hero {
     fill: #FFFFFF;
 }
 
-.section-abou .container:first-child,t .about-div {
+.section-about .container:first-child,t .about-div {
     text-align: center;
 }
 
@@ -726,6 +726,13 @@ grid-template-columns: repeat(2, 1fr);
         align-items: center;
         text-align: center;
     }
+
+     
+  .footer-1--cols {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    margin-top: 6.4rem;
+}
     footer-1--cols .social-footer--icons {
         justify-content: center;
     }
@@ -752,20 +759,7 @@ grid-template-columns: repeat(2, 1fr);
         grid-template-columns: 1fr;
     }
 
-    & .section-course .grid-four--cols {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
 
-footer .grid-four--cols {
-    grid-template-columns: repeat(3, minmax(150px, 1fr));
-    text-align: left;
-}
-
-& .footer-1--cols {
-    grid-row: 2/3;
-    grid-column: 1/-1;
-    margin-top: 6.4rem;
-}
 
  & .choose-center--div {
     & figure::before {
@@ -793,8 +787,9 @@ footer .grid-four--cols {
 .grid {
     gap: 3.6rem;
 }
- . section-blog, .section-course, .section-contact {
-     grid-template-columns: 1fr;
+ .section-course .grid-four--cols,
+ .section-blog .grid-four--cols {
+     grid-template-columns: 1fr ! important;
  }
 
 .section-contact--homepage .submit-btn {
