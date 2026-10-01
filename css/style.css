@@ -832,7 +832,7 @@ grid-template-columns: repeat(2, 1fr);
 }
 }
 
-@media (max-width: 350pxpx) {
+@media (max-width: 350px) {
     footer .grid-four--cols {
     grid-template-columns: 1fr; /* Stack them */
     gap: 2rem; /* Reduce the gap between the stacked sections */
