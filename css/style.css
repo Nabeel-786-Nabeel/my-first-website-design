@@ -837,4 +837,8 @@ grid-template-columns: repeat(2, 1fr);
     grid-template-columns: 1fr; /* Stack them */
     gap: 2rem; /* Reduce the gap between the stacked sections */
 }
+     .section-course .grid-four--cols,
+ .section-blog .grid-four--cols {
+     grid-template-columns: 1fr ! important;
+ }
 }
