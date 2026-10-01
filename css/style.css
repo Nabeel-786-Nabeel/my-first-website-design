@@ -755,11 +755,11 @@ grid-template-columns: repeat(2, 1fr);
     }
 
 
-  & .footer-1--cols {
+ /* & .footer-1--cols {
     grid-row: 2/3;
     grid-column: 1/-1;
     margin-top: 6.4rem;
-  }
+  }*/
 
  & .choose-center--div {
     & figure::before {
