@@ -110,8 +110,7 @@ html {
 }
 
 p, li, a, label {
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     letter-spacing:  0.1rem;
     font-weight: 400;
     color: var(--para-color);
@@ -178,14 +177,14 @@ main .section-hero {
         font-family: "jost";
         color: var(--h-color);
         font-weight: 900;
-        font-size: 5.8rem;
+        font-size: 5rem;
         line-height: 1.5;
         width: 100%;
     }
 }
 
 .section-hero--image img {
-    width: 100%;
+    width: 95%;
     height: auto;
     transform: scaleX(-1);
 }
@@ -208,7 +207,7 @@ main .section-hero {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 150px;
+    height: 100px;
 }
 
 .custom-shape-divider-bottom-1766899191 .shape-fill {
@@ -234,6 +233,10 @@ margin: 2.4rem 0 1.2rem 0;
     color: var(--heading-color);
     
 }
+
+.section-about .grid {
+    gap: 6.2rem;
+}
 .section-about .container img {
     padding: 2.4rem;
     width: 12rem;
@@ -243,10 +246,13 @@ margin: 2.4rem 0 1.2rem 0;
 }
 
 .section-about .icon-para {
-    padding: 0 2.4rem 0 2.4rem;
+    padding: 0 2.2rem 0 2.2rem;
 }
 
-.section-about .grid-three--clos   {
+.section-about .about-div  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
 }
 
@@ -643,203 +649,74 @@ input:focus-visible {
     background: var(--heading-color);
 }
 
-@media (max-width: 1100px ) {
+@media (max-width: 1230px) {
     html {
-        font-size: 50.25%;
-    }
-      p, a {
-        font-size: 2rem;
+        font-size: 55%;
     }
 
-    
+    main .section-hero {
+        padding: 0 5rem;
+    }
+}
+
+@media (max-width: 1060px) {
+
+    html {
+font-size: 50%;
+}
 .custom-shape-divider-bottom-1766899191 svg {
-    height: 120px;
+    height: 90px;
 }
 
-}
-
-@media (max-width: 950px ) {
-    html {
-        font-size: 45.25%;
-    }
-    p, a {
-        font-size: 2rem;
-    }
-    
-
-}
-
-@media (max-width: 850px ) {
-    html {
-        font-size: 40.25%;
-    }
-    p, a {
-        font-size: 2rem;
-    }
-    
-
-    
-.custom-shape-divider-bottom-1766899191 svg {
-    height: 50px;
-}
-
-}
-@media (max-width: 750px ) {
-    html {
-        font-size: 35.25%;
-    }
-    p, a {
-        font-size: 2rem;
-    }
-
-.grid-three--cols, 
-.grid-four--cols {
-grid-template-columns: repeat(2, 1fr); 
+.section-hero--image img {
+width: 80%;
 }
 }
 
-@media (max-width: 650px ) {
+@media  (max-width: 990px) {
+     .custom-shape-divider-bottom-1766899191 svg {
+    height: 70px;}
+   .section-hero {
+     .grid-two--cols {
+   grid-template-columns: 1fr;
+   & .section-hero--content {
+    order: 2;
+   }
+   & .section-hero--image {
+    order: 1;
+     display: flex;
+   align-items: center;
+   justify-content: center;
+
+   &  img {
+   width: 50%;
+   }
+   }
+   }
+  
+   }
+}
+
+@media  (max-width: 540px) {
+        html {
+font-size: 40%;
+}
     .section-navbar .container {
-        display: flex;
-        flex-direction: column;
-
-   & .nav-brand {
-        text-align: center;
-        margin-bottom: 2.4rem;
+      display: flex;
+      flex-direction: column;
     }
-    p, a {
-        font-size: 2rem;
-    }
-    footer .grid-four--cols {
-        grid-template-columns: 1fr; 
-        gap: 2.5rem; /* Space between the stacked sections */
-        text-align: center; /* Center align everything for mobile */
-    
-    }
-
-      .footer-1--cols {
-        grid-row: auto;
-        grid-column: auto;
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .nav-brand {
         text-align: center;
     }
-    footer-1--cols .social-footer--icons {
-        justify-content: center;
-    }
-}
 
-    & .section-hero--image {
-        order: 1;
-        width: 50%;
-        margin: 0 auto;
+    .hero-btn {
+        margin-bottom: 5rem;
     }
 
-    & .section-hero--content {
-        order: 2;
+    .section-hero .section-hero--content .hero-subheading, .hero-heading, .hero-para, .hero-btn {
+        margin-top: 0rem;
     }
-
-    & .section-hero {
-        height: auto;
+    .section-hero--content .hero-heading {
+        line-height: 0rem;
     }
-
-    
-
-    & .grid-two--cols,
-    .grid-three--clos {
-        grid-template-columns: 1fr;
-    }
-
-    & .section-course .grid-four--cols {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-footer .grid-four--cols {
-    grid-template-columns: repeat(3, minmax(150px, 1fr));
-    text-align: left;
-}
-
-& .footer-1--cols {
-    grid-row: 2/3;
-    grid-column: 1/-1;
-    margin-top: 6.4rem;
-}
-
- & .choose-center--div {
-    & figure::before {
-        width: 0;
-        height: 0;
-        background-color: transparent;
-        padding: 0;
-    }
-     & figure::after {
-        width: 0;
-        height: 0;
-        background-color: transparent;
-        padding: 0;
-    }
-}
-
-:is(
-    .section-about, 
-    .section-blog, 
-    .section-course, 
-    .section-contact--homepage, 
-    .section-why--choose,
-    .section-contact
-)
-.grid {
-    gap: 3.6rem;
-}
- . section-blog, .section-course, .section-contact {
-     grid-template-columns: 1fr;
- }
-
-.section-contact--homepage .submit-btn {
-  display: block;
-  text-align: center;
-  padding: 2.2rem 3.2rem;
-  text-size: 4rem;
-}
-}
-
-@media (max-width: 580px) {
-    .choose-center--div
-    {
-        order: 1;
-    }
-    .choose-left--div {
-        order: 2;
-    }
-    .choose-right--div {
-        order: 3;
-    }
-    .section-course .course-div {
-    padding: 3rem 6rem;
-    margin: 3rem;
-}
-}
-
-@media (max-width: 500px) {
-    .section-why--choose .grid-three--cols {
-        flex-direction: column;
-    }
-    .section-why--choose {
-        & img{
-            width: 30%;
-        }
-    }
-    .section-why--choose .text-align--right .why-choose--div {
-    align-items: start;
-    text-align: left;
-}
-}
-
-@media (max-width: 350pxpx) {
-    footer .grid-four--cols {
-    grid-template-columns: 1fr; /* Stack them */
-    gap: 2rem; /* Reduce the gap between the stacked sections */
-}
 }
